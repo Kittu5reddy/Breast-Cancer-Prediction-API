@@ -1,37 +1,52 @@
-# Breast Cancer Prediction Web App
+# Breast Cancer Classifier
 
-This web application predicts whether a breast cancer tumor is malignant or benign using a machine learning model trained on the Breast Cancer dataset from the `sklearn.datasets` library. It uses Logistic Regression for prediction and is deployed with Flask for a simple web interface.
+This project is a web application that predicts whether breast cancer is malignant or benign based on user input. It uses a logistic regression model trained on the breast cancer dataset from sklearn.
 
-## Features
-- Accepts input of breast cancer features through a web form.
-- Provides prediction output: whether the cancer is malignant (cancerous) or benign (non-cancerous).
-- Built with Flask, Python, and scikit-learn.
+## Project Structure
+
+- `app.py`: The main Flask application file that handles routing and rendering templates.
+- `main.py`: Contains the machine learning model and the prediction logic.
+- `static/search.css`: CSS file for styling the web pages.
+- `templates/index.html`: (Currently empty) HTML template for the index page.
+- `templates/predict.html`: HTML template for displaying the prediction result.
+- `templates/search.html`: HTML template for the input form.
 
 ## Installation
 
-### Prerequisites
-Ensure that you have Python 3.6 or higher installed.
+1. Clone the repository:
+    ```sh
+    git clone <repository-url>
+    cd <repository-directory>
+    ```
 
-You also need to install the required libraries, which can be done using `pip`. You can create a virtual environment and install the dependencies.
+2. Create a virtual environment and activate it:
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
 
-### Steps to Install:
+3. Install the required packages:
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-1. **Clone the repository (or copy the files to your project directory):**
+## Usage
 
-   ```bash
-   git clone https://github.com/your-username/breast-cancer-prediction.git
-   cd breast-cancer-prediction
+1. Run the Flask application:
+    ```sh
+    python app.py
+    ```
 
+2. Open your web browser and go to `http://127.0.0.1:5000/`.
 
-   python -m venv venv
+3. Enter the required input values in the form and click "Predict" to get the prediction result.
 
+## Input Format
 
+The input should be a comma-separated list of 30 numerical values representing the following features:
 
-   source venv/bin/activate
+## Example Input
+[13.54,14.36,87.46,566.3,0.09779,0.08129,0.06664,0.04781,0.1885,0.05766,0.2699,0.7886,2.058,23.56,0.008462,0.0146,0.02387,0.01315,0.0198,0.0023,15.11,19.26,99.7,711.2,0.144,0.1773,0.239,0.1288,0.2977,0.07259
+## License
 
-
-   pip install -r requirements.txt
-
-   or
-pip install flask scikit-learn pandas numpy
-   
+This project is licensed under the MIT License.]
