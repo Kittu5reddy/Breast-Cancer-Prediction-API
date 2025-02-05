@@ -58,3 +58,5 @@ The input should be a comma-separated list of 30 numerical values representing t
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+![Breast Cancer Classifier](static/img.jpg)
