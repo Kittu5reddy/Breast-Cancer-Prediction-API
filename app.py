@@ -11,7 +11,6 @@ app.config['SECRET_KEY'] = "secretkey"
 def index():
     if request.method == 'POST':
         inp = request.form['in']
-        
         return render_template('predict.html', out = main.predict(inp))
     return render_template('search.html')
 
